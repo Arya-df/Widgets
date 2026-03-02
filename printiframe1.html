@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postcard Print Preview</title>
+    <style>
+        *{box-sizing: border-box;}
+        body {background-color: #f3f4f6;margin: 0;display: flex;flex-direction: row;align-items: center;padding: 40px 20px;}
+        .preview-container {background: #f3f4f6;padding: 20px;width: 460px;text-align: center;}
+        .iframe-wrapper {width: 420px;height: 450px;overflow: hidden;border: 1px solid #e5e7eb;position: relative;background: #eee;}
+        #postcard-iframe {width: 420px;height: 450px;border: none;position: absolute;top: 0;left: 0;xtransform: scale(0.52083);transform-origin: top left;}
+
+    </style>
+</head>
+<body>
+
+
+
+    <div class="preview-container">
+        <div class="iframe-wrapper">
+            <iframe id="postcard-iframe" src="Property-card1.html"></iframe>
+        </div>
+    </div>
+    <div class="preview-container">
+        <div class="iframe-wrapper">
+            <iframe id="postcard-iframe" src="Property-card1.html"></iframe>
+        </div>
+    </div>
+    <div class="preview-container">
+        <div class="iframe-wrapper">
+            <iframe id="postcard-iframe" src="Property-card1.html"></iframe>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
