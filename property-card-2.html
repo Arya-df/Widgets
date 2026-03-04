@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="https://www.theagencyre.com/theme/us/site_1/css/max/common.css" />
+     <link rel="stylesheet" type="text/css" href="https://unpkg.com/ibp-cdn@1.0.39/agorafont.css" />
+      <script type="text/javascript" src="https://www.theagencyre.com/js/max/common.js" defer></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Luxury Property Card</title>
+    <style>
+        :root {
+            --brand-red: #b92a37;
+            --text-dark: #333333;
+            --text-grey: #777777;
+            --bg-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        /* Card Container */
+        .property-card { background-color: var(--bg-white);overflow: hidden;}
+
+        /* Image Section */
+        .image-container { height: 280px; background-color: #ddd; }
+
+        
+
+        /* Luxury Ribbon */
+        .luxury-badge {           
+            top: 15px;
+            left: 0;
+            background-color: var(--brand-red);
+            color: white;
+            padding: 6px 15px;
+            font-size: 14px;
+            font-weight: bold;            
+            letter-spacing: 1px;
+            z-index: 10;
+        }
+        
+        /* The ribbon notch effect */
+        .luxury-badge::after {
+            content: '';
+            position: absolute;
+            right: -15px;
+            top: 0;
+            border-width: 14.5px 0 14.5px 15px;
+            border-style: solid;
+            border-color: transparent transparent transparent var(--brand-red);
+        }
+
+        /* Red Arrow at bottom of image */
+        .image-arrow {
+           
+            bottom: 0;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+            border-bottom: 20px solid var(--brand-red);
+        }
+
+        /* Content Section */
+        .content {
+            padding: 20px 25px;
+            flex-grow: 1;
+            
+        }
+
+        .address-main {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .address-sub {
+            font-size: 16px;
+            color: var(--text-grey);
+            margin: 4px 0 12px 0;
+            text-transform: uppercase;
+        }
+
+        .specs {
+            display: flex;
+            gap: 15px;
+            color: var(--text-grey);
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .specs strong {
+            color: #555;
+            font-size: 16px;
+            margin-right: 2px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        /* Action Button */
+        .action-btn {
+            width: 45px;
+            height: 45px;
+            background-color: var(--brand-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .action-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .action-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+    </style>
+</head>
+<body>
+
+    <article  ag-c="3/3 4/4 8/8 12/12 16/16" class="property-card p-0 s-d-f s-f-fd-c s-p-r">
+        <!-- Badge -->
+        <div class="luxury-badge s-p-a s-tt-u">Luxury</div>
+
+        <!-- Image Area -->
+        <div class="image-container s-w-100 s-p-r">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800" alt="Luxury House" class="property-image s-w-100 s-h-100 s-of-c s-d-b">
+            <div class="image-arrow s-p-a"></div>
+        </div>
+
+        <!-- Text Area -->
+        <div class="content s-d-f s-f-fd-c s-f-jc-sb s-p-r">
+            <div>
+                <h2 class="address-main">222 E Pleasant St</h2>
+                <p class="address-sub">Oconomowoc, WI 53066</p>
+                
+                <div class="specs">
+                    <span><strong>5</strong> Beds</span>
+                    <span><strong>4</strong> Bath(s)</span>
+                    <span><strong>3,400</strong> Sq. Ft.</span>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="price">$3,499,900</div>
+                <div class="action-btn">
+                    <!-- Up-Right Arrow Icon -->
+                    <svg viewBox="0 0 24 24">
+                        <path d="M5 17.59L15.59 7H9V5h10v10h-2V8.41L6.41 19 5 17.59z"/>
+                    </svg>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+</body>
+</html>
